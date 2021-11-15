@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import React, { Suspense } from "react";
+
+import { Route, Switch, Redirect } from "react-router";
+
+import Header from "./Layout/Header";
+const Main = React.lazy(() => import("./pages/Main"));
+const Breakfast = React.lazy(() => import("./pages/Breakfast"));
+const Lunch = React.lazy(() => import("./pages/Lunch"));
+const Menu = React.lazy(() => import("./pages/Menu"));
+const Gallery = React.lazy(() => import("./pages/Gallery"));
+const Comments = React.lazy(() => import("./pages/Comments"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <Suspense fallback={<p>Loading</p>}>
+        <Switch>
+          <Route path="/" exact>
+            <Main />
+          </Route>
+          <Route path="/breakfast" exact>
+            <Breakfast />
+          </Route>
+          <Route path="/lunch" exact>
+            <Lunch />
+          </Route>
+          <Route path="/menu" exact>
+            <Menu />
+          </Route>
+          <Route path="/gallery" exact>
+            <Gallery />
+          </Route>
+          <Route path="/comments" exact>
+            <Comments />
+          </Route>
+          <Route path="/contact" exact>
+            <Contact />
+          </Route>
+        </Switch>
+      </Suspense>
+    </>
   );
 }
 
