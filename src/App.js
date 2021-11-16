@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 
 import { Route, Switch, Redirect } from "react-router";
 
-import Header from "./Layout/Header";
+import Header from "./components/Layout/Header";
 const Main = React.lazy(() => import("./pages/Main"));
 const Breakfast = React.lazy(() => import("./pages/Breakfast"));
 const Lunch = React.lazy(() => import("./pages/Lunch"));

@@ -1,0 +1,206 @@
+@import "../../scss/colors";
+.header {
+  width: 100vw;
+  position: relative;
+  @media screen and(min-width: 1023px) {
+    height: 450px;
+  }
+  &--background {
+    background-image: url("../../assets/img/background.jpg");
+    background-position: 50% 40%;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    position: relative;
+    @media screen and(min-width: 1023px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+    }
+  }
+  .menu {
+    &--desktop {
+      width: 90%;
+      max-width: 1000px;
+      height: 400px;
+      margin: 0 auto;
+      padding-top: 100px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+
+            font-weight: 300;
+            &.active {
+              outline: 3px solid white;
+            }
+            @media screen and(min-width: 1024px) {
+              padding: 0.5rem 1rem;
+            }
+          }
+        }
+      }
+
+      @media screen and(min-width: 1023px) {
+        display: flex;
+      }
+    }
+
+    &--mobile-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      background-color: $base-color;
+      height: 100px;
+      z-index: 2;
+      img {
+        width: 150px;
+      }
+      @media screen and(min-width: 1023px) {
+        display: none;
+      }
+    }
+    &--mobile {
+      background-color: $base-color;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.3s linear, opacity 0.3s ease-in-out;
+      position: relative;
+      pointer-events: none;
+      &-active {
+        opacity: 1;
+        max-height: 500px;
+        pointer-events: auto;
+      }
+      &-container {
+        z-index: 999;
+      }
+      &-background {
+        background-color: $base-color;
+        @media screen and (min-width: 1023px) {
+          display: none;
+        }
+      }
+      li {
+        text-align: center;
+        padding: 0.5rem 0;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid white;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+  .hamburger-menu__toggler {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    position: relative;
+    transform: rotate(0deg);
+    span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: black;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 13px;
+      }
+      &:nth-child(4) {
+        top: 26px;
+      }
+    }
+    &.active {
+      span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      span:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+}
+.blend-background {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.current-destination {
+  width: 90%;
+  max-width: 400px;
+  height: 150px;
+  padding: 0.5rem 0;
+  border: 3px solid white;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  div {
+    display: flex;
+  }
+  p,
+  a {
+    width: 150px;
+  }
+  p {
+    text-align: center;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  & > div span {
+    height: 2rem;
+    border: 1px solid white;
+  }
+}
