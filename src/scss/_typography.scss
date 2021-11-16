@@ -11,7 +11,7 @@
   font-size: 25px;
 }
 .h5 {
-  font-size: 420px;
+  font-size: 20px;
 }
 .h6 {
   font-size: 16px;
@@ -29,4 +29,8 @@ h4,
 h5,
 h6 {
   font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+a:hover {
+  color: #ddd !important;
 }
