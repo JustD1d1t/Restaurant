@@ -1,0 +1,39 @@
+@import "../../scss/colors";
+.footer {
+  width: 100vw;
+  background-color: $base-color;
+  padding: 3rem 0;
+  color: white;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and(min-width:767px) {
+      flex-direction: row;
+    }
+    & > * {
+      flex-grow: 1;
+      margin: 0.5rem 0;
+    }
+  }
+  &__logo {
+    text-align: center;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-weight: 300;
+    }
+  }
+}

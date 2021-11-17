@@ -47,7 +47,9 @@ const Header = (props) => {
       <section className={classes.header}>
         <div className={classes["menu--mobile-container"]}>
           <div className={classes["menu--mobile-nav"]}>
-            <img src={logo} alt="" />
+            <NavLink className="h5" to="/">
+              <img src={logo} alt="" />
+            </NavLink>
             <div onClick={toggleMobileMenu} className={`${menuTogglerClasses}`}>
               <span></span>
               <span></span>

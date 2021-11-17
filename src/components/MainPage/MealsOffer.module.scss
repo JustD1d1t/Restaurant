@@ -1,0 +1,43 @@
+.meals-offer {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.background-image {
+  background-image: url("../../assets/img/tableware.jpg");
+  background-attachment: fixed;
+  background-position: 30% 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 7px 15px 1px #000000;
+
+  div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+.meals-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media screen and(min-width: 767px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1023px) {
+    flex-wrap: nowrap;
+  }
+}
+.fullHeight {
+  height: 100%;
+}
