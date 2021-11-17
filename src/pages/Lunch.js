@@ -1,8 +1,10 @@
+import LunchDetails from "../components/Lunch/LunchDetails";
+import WitdthContianer from "../components/Layout/WidthContainer";
 const Lunch = (props) => {
   return (
-    <div>
-      <h2>Lunch</h2>
-    </div>
+    <WitdthContianer>
+      <LunchDetails />
+    </WitdthContianer>
   );
 };
 

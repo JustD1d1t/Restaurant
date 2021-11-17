@@ -2,7 +2,6 @@ import offer1Img from "../../assets/img/offer1.png";
 import offer2Img from "../../assets/img/offer2.png";
 import offer3Img from "../../assets/img/offer3.png";
 import offer4Img from "../../assets/img/offer4.png";
-import Button from "../Layout/Button";
 import classes from "./MealsOffer.module.scss";
 import WidthContainer from "../Layout/WidthContainer";
 import MealOfferItem from "./MealOfferItem";
