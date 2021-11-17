@@ -1,8 +1,18 @@
+import WidthContainer from "../components/Layout/WidthContainer";
+import Introduction from "../components/MainPage/Introduction";
+import MealsOffer from "../components/MainPage/MealsOffer";
+import Banner from "../components/MainPage/Banner";
 const Main = (props) => {
   return (
-    <div>
-      <h2>Strona główna</h2>
-    </div>
+    <>
+      <WidthContainer>
+        <Introduction />
+      </WidthContainer>
+      <MealsOffer />
+      <WidthContainer>
+        <Banner />
+      </WidthContainer>
+    </>
   );
 };
 

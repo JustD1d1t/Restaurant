@@ -28,9 +28,23 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Dancing Script", cursive;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 a:hover {
   color: #ddd !important;
+}
+.fw300 {
+  font-weight: 300;
+}
+.fw400 {
+  font-weight: 400;
+}
+.fw600 {
+  font-weight: 600;
 }
