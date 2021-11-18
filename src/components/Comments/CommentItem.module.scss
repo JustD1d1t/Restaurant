@@ -1,0 +1,14 @@
+@import "../../scss/colors";
+.comment-item {
+  display: flex;
+  padding: 3rem 0;
+  border-bottom: 1px solid $base-color;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p:first-of-type {
+      font-size: 12px;
+    }
+  }
+}

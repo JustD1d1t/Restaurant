@@ -1,8 +1,10 @@
+import CommentsList from "../components/Comments/CommentsList";
+import WidthContainer from "../components/Layout/WidthContainer";
 const Comments = (props) => {
   return (
-    <div>
-      <h2>Komentarze</h2>
-    </div>
+    <WidthContainer>
+      <CommentsList />
+    </WidthContainer>
   );
 };
 
