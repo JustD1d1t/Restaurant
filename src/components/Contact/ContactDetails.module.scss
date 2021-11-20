@@ -1,0 +1,13 @@
+@import "../../scss/colors";
+
+.contact-details {
+  img {
+    height: 12px;
+  }
+  a {
+    color: $base-color;
+    &:hover {
+      color: $alternative-text-color;
+    }
+  }
+}
