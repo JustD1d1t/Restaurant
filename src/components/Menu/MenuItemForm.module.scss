@@ -1,0 +1,23 @@
+@import "../../scss/colors";
+
+.menu-item {
+  &__form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 200px;
+    input {
+      background-color: transparent;
+      border: 2px solid $base-color;
+      border-radius: 5px;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+.button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid $base-color;
+  padding: 0.5rem 1rem;
+}

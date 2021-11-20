@@ -72,7 +72,7 @@ const CommentsList = () => {
   });
   return (
     <section className={classes.comments}>
-      <h2 class="h3 text-center mar-20">Komentarze</h2>
+      <h2 class="h3 text-center mar-20">References</h2>
       <p className="mar-20">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
         laboriosam architecto, provident quos possimus culpa perferendis

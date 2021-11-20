@@ -11,12 +11,12 @@ const Header = (props) => {
   const path = params.pathname.slice(1);
 
   const menuPaths = {
-    breakfast: "Śniadanie",
+    breakfast: "Breakfast",
     lunch: "Lunch",
     menu: "Menu",
-    gallery: "Galeria",
-    comments: "Opinie",
-    contact: "Kontakt",
+    gallery: "Gallery",
+    comments: "References",
+    contact: "Contact",
   };
 
   const menuTogglerClasses =
@@ -34,13 +34,13 @@ const Header = (props) => {
   const destinationText = menuPaths[path] ? (
     <div>
       <NavLink activeClassName={classes.active} to="/">
-        Strona główna
+        Main Page
       </NavLink>
       <span></span>
       <p>{menuPaths[path]}</p>
     </div>
   ) : (
-    <h3>Witaj w naszej restauracji</h3>
+    <h3>Welcome in Loggia Restaurant</h3>
   );
   return (
     <>
@@ -65,7 +65,7 @@ const Header = (props) => {
                   className="h5"
                   to="/breakfast"
                 >
-                  Śniadanie
+                  Breakfast
                 </NavLink>
               </li>
               <li>
@@ -92,7 +92,7 @@ const Header = (props) => {
                   className="h5"
                   to="/gallery"
                 >
-                  Galeria
+                  Gallery
                 </NavLink>
               </li>
               <li>
@@ -101,7 +101,7 @@ const Header = (props) => {
                   className="h5"
                   to="/comments"
                 >
-                  Opinie
+                  References
                 </NavLink>
               </li>
               <li>
@@ -110,7 +110,7 @@ const Header = (props) => {
                   className="h5"
                   to="/contact"
                 >
-                  Kontakt
+                  Contact
                 </NavLink>
               </li>
             </ul>
@@ -128,7 +128,7 @@ const Header = (props) => {
                 className="h5"
                 to="/breakfast"
               >
-                Śniadanie
+                Breakfast
               </NavLink>
             </li>
             <li>
@@ -160,7 +160,7 @@ const Header = (props) => {
                 className="h5"
                 to="/gallery"
               >
-                Galeria
+                Gallery
               </NavLink>
             </li>
             <li>
@@ -169,7 +169,7 @@ const Header = (props) => {
                 className="h5"
                 to="/comments"
               >
-                Opinie
+                References
               </NavLink>
             </li>
             <li>
@@ -178,7 +178,7 @@ const Header = (props) => {
                 className="h5"
                 to="/contact"
               >
-                Kontakt
+                Contact
               </NavLink>
             </li>
           </ul>

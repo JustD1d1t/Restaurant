@@ -1,7 +1,11 @@
+import MenuItems from "../components/Menu/MenuItems";
+import WidthContainer from "../components/Layout/WidthContainer";
 const Menu = (props) => {
   return (
     <div>
-      <h2>Menu</h2>
+      <WidthContainer className="align-center">
+        <MenuItems></MenuItems>
+      </WidthContainer>
     </div>
   );
 };
