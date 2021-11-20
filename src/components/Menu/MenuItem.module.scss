@@ -1,0 +1,38 @@
+@import "../../scss/colors";
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and(min-width: 767px) {
+    flex-direction: row;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      background-color: transparent;
+      border: 2px solid $base-color;
+      border-radius: 5px;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 80px;
+  }
+}
