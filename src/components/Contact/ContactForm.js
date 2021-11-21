@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik, Field } from "formik";
 import classes from "./ContactForm.module.scss";
-import Button from "../Layout/Button";
 
 function validateEmail(value) {
   let error;

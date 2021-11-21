@@ -11,6 +11,9 @@ const MealsOffer = React.lazy(() =>
 const Main = (props) => {
   return (
     <>
+      <WidthContainer>
+        <Introduction />
+      </WidthContainer>
       <Suspense
         fallback={
           <div className="align-center">
@@ -18,9 +21,6 @@ const Main = (props) => {
           </div>
         }
       >
-        <WidthContainer>
-          <Introduction />
-        </WidthContainer>
         <MealsOffer />
         <WidthContainer>
           <Banner />
