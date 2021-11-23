@@ -60,6 +60,7 @@ const CartForm = () => {
             alert("poprawnie wysłano formularz");
             setSubmitting(false);
             resetForm({});
+            handleOrder();
           }, 400);
         }}
       >
@@ -108,7 +109,6 @@ const CartForm = () => {
               type="submit"
               disabled={isSubmitting}
               className={classes["button"]}
-              onClick={handleOrder}
             >
               Wyślij
             </button>

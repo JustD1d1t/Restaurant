@@ -14,9 +14,8 @@ const GalleryImage = (props) => {
   return (
     <div>
       <Modal show={modalIsOpen} closed={closeModal}>
-        <img src={props.image} alt="" />
+        <img src={props.image2} alt="" />
       </Modal>
-      {/* {modalIsOpen ? <Backdrop show={modalIsOpen} /> : null} */}
       <div className={classes["gallery-image"]} onClick={showModal}>
         <img src={props.image} alt="" />
       </div>
