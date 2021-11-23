@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { combineReducers, createStore } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import AOS from "aos";
+
+import cartReducer from "./store/reducers/cart";
 
 import "./scss/_colors.scss";
 import "./index.scss";
@@ -17,9 +21,17 @@ AOS.init({
   easing: "ease-in-out",
 });
 
+const rootReducer = combineReducers({
+  cart: cartReducer,
+});
+
+const store = createStore(rootReducer);
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );

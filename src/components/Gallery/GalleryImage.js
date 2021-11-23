@@ -2,7 +2,7 @@ import classes from "./GalleryImage.module.scss";
 import React, { useState } from "react";
 
 import Modal from "../Layout/Modal";
-import Backdrop from "../Layout/Backdrop";
+// import Backdrop from "../Layout/Backdrop";
 const GalleryImage = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(null);
   const showModal = () => {
@@ -16,7 +16,7 @@ const GalleryImage = (props) => {
       <Modal show={modalIsOpen} closed={closeModal}>
         <img src={props.image} alt="" />
       </Modal>
-      {modalIsOpen ? <Backdrop show={modalIsOpen} /> : null}
+      {/* {modalIsOpen ? <Backdrop show={modalIsOpen} /> : null} */}
       <div className={classes["gallery-image"]} onClick={showModal}>
         <img src={props.image} alt="" />
       </div>

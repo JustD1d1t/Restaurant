@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import { useState } from "react";
 import HeaderCartButton from "./HeaderCartButton";
+import Cart from "../Cart/Cart";
 
 import logo from "../../assets/img/logo.png";
 const Header = (props) => {
@@ -188,6 +189,7 @@ const Header = (props) => {
           {destinationText}
           <HeaderCartButton />
         </div>
+        <Cart show="true" />
       </section>
     </>
   );

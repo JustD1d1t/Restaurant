@@ -16,7 +16,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <Switch>
         <Route path="/" exact>
           <Main />

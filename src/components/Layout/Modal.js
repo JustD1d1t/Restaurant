@@ -8,7 +8,8 @@ const animationTiming = {
   exit: 1000,
 };
 
-const modal = (props) => {
+const Modal = (props) => {
+  const classes = `modal__background ${props.className}`;
   return (
     <CSSTransition
       mountOnEnter
@@ -24,14 +25,16 @@ const modal = (props) => {
         appearActive: null,
       }}
     >
-      <div className="modal">
+      <div className={classes}>
         <div className="modal__content">
           {props.children}
-          <button onClick={props.closed}>&#x2715;</button>
+          <button onClick={props.closed} className="modal-close-button">
+            &#x2715;
+          </button>
         </div>
       </div>
     </CSSTransition>
   );
 };
 
-export default modal;
+export default Modal;
