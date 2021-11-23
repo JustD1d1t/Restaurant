@@ -12,12 +12,18 @@
       border-radius: 5px;
       padding: 0.5rem;
       margin-right: 0.5rem;
+      background-color: white;
     }
   }
 }
 .button {
-  background-color: transparent;
+  background-color: white;
   border-radius: 5px;
   border: 2px solid $base-color;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+  }
 }

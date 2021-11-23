@@ -110,6 +110,7 @@ const MenuItems = () => {
   const breakfast = DUMMY_MEALS.breakfast.map((meal) => (
     <MenuItem
       key={meal.id}
+      id={meal.id}
       title={meal.title}
       description={meal.description}
       price={meal.price}
@@ -118,6 +119,7 @@ const MenuItems = () => {
   const starters = DUMMY_MEALS.starters.map((meal) => (
     <MenuItem
       key={meal.id}
+      id={meal.id}
       title={meal.title}
       description={meal.description}
       price={meal.price}
@@ -126,6 +128,7 @@ const MenuItems = () => {
   const burgers = DUMMY_MEALS.burgers.map((meal) => (
     <MenuItem
       key={meal.id}
+      id={meal.id}
       title={meal.title}
       description={meal.description}
       price={meal.price}
@@ -134,13 +137,19 @@ const MenuItems = () => {
   const fireGrill = DUMMY_MEALS.fireGrill.map((meal) => (
     <MenuItem
       key={meal.id}
+      id={meal.id}
       title={meal.title}
       description={meal.description}
       price={meal.price}
     />
   ));
   const iceColdDrinks = DUMMY_MEALS.iceColdDrinks.map((meal) => (
-    <MenuItem key={meal.id} title={meal.title} price={meal.price} />
+    <MenuItem
+      key={meal.id}
+      id={meal.id}
+      title={meal.title}
+      price={meal.price}
+    />
   ));
   return (
     <section>
