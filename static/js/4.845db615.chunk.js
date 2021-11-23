@@ -1,2 +1,0 @@
-(this.webpackJsonprestaurant=this.webpackJsonprestaurant||[]).push([[4],{88:function(n,a,e){n.exports={banner:"Banner_banner__7wLal"}},91:function(n,a,e){"use strict";e.r(a);var t=e(88),r=e.n(t),s=e(0);a.default=function(){return Object(s.jsx)("div",{className:"".concat(r.a.banner),children:Object(s.jsx)("h1",{className:"h1",children:'"Loggia - we love food"'})})}}}]);
-//# sourceMappingURL=4.845db615.chunk.js.map
