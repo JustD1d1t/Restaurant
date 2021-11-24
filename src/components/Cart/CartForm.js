@@ -37,6 +37,8 @@ function validateMobile(value) {
   let error;
   if (!value) {
     error = "Wymagane dane";
+  } else if (/\D{1,}/i.test(value)) {
+    error = "Numer nie może zawierać innych znaków niż cyfry";
   } else if (!/^\d{9,}$/i.test(value)) {
     error = "Wprowadzony numer jest za krótki. Minimum 9 cyfr";
   }

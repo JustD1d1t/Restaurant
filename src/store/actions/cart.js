@@ -3,7 +3,6 @@ export const OPEN_CART = "OPEN_CART";
 export const CLOSE_CART = "CLOSE_CART";
 export const INCREASE_AMOUNT = "INCREASE_AMOUNT";
 export const DECREASE_AMOUNT = "DECREASE_AMOUNT";
-export const CONFIRM_ORDER = "CONFIRM_ORDER";
 export const CLEAR_ORDER = "CLEAR_ORDER";
 
 export const addToCart = (product) => {
@@ -38,11 +37,6 @@ export const decreaseAmount = (id) => {
   return {
     type: DECREASE_AMOUNT,
     id,
-  };
-};
-export const confirmOrder = () => {
-  return {
-    type: CONFIRM_ORDER,
   };
 };
 export const clearOrder = () => {

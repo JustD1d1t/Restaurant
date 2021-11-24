@@ -2,7 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   padding: 0.5rem 0;
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+  }
   &__meal-name {
     h3 {
       text-align: left;
@@ -19,12 +23,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80px;
     p {
       font-size: 1rem;
       padding: 0.5rem;
+      width: 50px;
       @media screen and (min-width: 767px) {
         font-size: 1.5rem;
+        width: 70px;
       }
     }
     button {

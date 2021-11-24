@@ -1,20 +1,43 @@
 import CartItems from "./CartItems";
 import { useSelector, useDispatch } from "react-redux";
 import Modal from "../Layout/Modal";
-import { closeCart, confirmOrder } from "../../store/actions/cart";
+import { closeCart } from "../../store/actions/cart";
 import classes from "./Cart.module.scss";
 import Button from "../Layout/Button";
 import CartForm from "./CartForm";
+import { useEffect, useState } from "react";
 const Cart = () => {
   const isCartVisible = useSelector((state) => state.cart.isCartOpen);
   const isCartEmpty = useSelector((state) => state.cart.products.length === 0);
-  const isCartConfirmed = useSelector((state) => state.cart.isCartConfirmed);
+  const cart = useSelector((state) => state.cart);
+  let totalPrice = 0;
+  cart.products.forEach((product) => {
+    totalPrice += product.price * product.amount;
+  });
+
+  console.log(totalPrice);
+  const [isCartConfirmed, setIsCartConfirmed] = useState(false);
   const dispatch = useDispatch();
+
   const handleCloseCart = () => {
     dispatch(closeCart());
+    setTimeout(() => {
+      handleCancelConfirmationOrder();
+    }, 300);
   };
+
+  useEffect(() => {
+    if (isCartEmpty) {
+      setIsCartConfirmed(false);
+    }
+  }, [isCartEmpty]);
+
   const handleConfirmOrder = () => {
-    dispatch(confirmOrder());
+    setIsCartConfirmed(true);
+  };
+
+  const handleCancelConfirmationOrder = () => {
+    setIsCartConfirmed(false);
   };
   return (
     <Modal show={isCartVisible} closed={handleCloseCart}>
@@ -27,6 +50,10 @@ const Cart = () => {
           ipsa quos? Provident laborum nemo nisi itaque iste consequatur
           laudantium officiis?
         </p>
+        <p className={`text-right h4 ${classes["total-value"]}`}>
+          Total value: {totalPrice} $
+        </p>
+
         <div className={classes["cart__buttons"]}>
           <Button
             className={classes["change-order-button"]}
@@ -36,13 +63,13 @@ const Cart = () => {
           </Button>
           <Button
             className={classes["complete-order-button"]}
-            disabled={isCartEmpty}
+            disabled={isCartEmpty || isCartConfirmed}
             onClick={handleConfirmOrder}
           >
             Complete order
           </Button>
         </div>
-        {isCartConfirmed && <CartForm />}
+        {isCartConfirmed && !isCartEmpty && <CartForm />}
       </div>
     </Modal>
   );

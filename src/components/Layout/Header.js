@@ -65,6 +65,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/breakfast"
+                  onClick={toggleMobileMenu}
                 >
                   Breakfast
                 </NavLink>
@@ -74,6 +75,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/lunch"
+                  onClick={toggleMobileMenu}
                 >
                   Lunch
                 </NavLink>
@@ -83,6 +85,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/menu"
+                  onClick={toggleMobileMenu}
                 >
                   Menu
                 </NavLink>
@@ -92,6 +95,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/gallery"
+                  onClick={toggleMobileMenu}
                 >
                   Gallery
                 </NavLink>
@@ -101,6 +105,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/comments"
+                  onClick={toggleMobileMenu}
                 >
                   References
                 </NavLink>
@@ -110,6 +115,7 @@ const Header = (props) => {
                   activeClassName={classes.active}
                   className="h5"
                   to="/contact"
+                  onClick={toggleMobileMenu}
                 >
                   Contact
                 </NavLink>

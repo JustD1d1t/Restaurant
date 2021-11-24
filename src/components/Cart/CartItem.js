@@ -22,9 +22,13 @@ const CartItem = (props) => {
       </div>
       <div className={classes["cart-item__summary"]}>
         <div className={classes["cart-item__amount"]}>
-          <button onClick={decreaseItemAmount}>-</button>
+          <button onClick={decreaseItemAmount}>
+            <span>-</span>
+          </button>
           <p>{amount}</p>
-          <button onClick={increaseItemAmount}>+</button>
+          <button onClick={increaseItemAmount}>
+            <span>+</span>
+          </button>
         </div>
         <p className={classes["cart-item__price"]}>
           {fullPriceForItem.toFixed(2)} $

@@ -4,10 +4,12 @@
   border-radius: 5px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.8);
   max-width: 100vw;
-  width: 600px;
   padding: 1rem;
-  max-height: 90vh;
+  max-height: 95vh;
   overflow: auto;
+  @media screen and(min-width: 767px) {
+    width: 600px;
+  }
   &__info {
     font-size: 12px;
   }
@@ -17,6 +19,9 @@
     justify-content: space-around;
     padding: 1rem 1rem 0 1rem;
   }
+}
+.total-value {
+  padding-right: 3rem;
 }
 .change-order-button {
   background-color: transparent;

@@ -4,23 +4,32 @@ import React, { useRef } from "react";
 
 const MenuItemForm = (props) => {
   const amountInputRef = useRef();
-  const confirmFormCart = () => {
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const enteredAmount = +amountInputRef.current.value;
+    if (enteredAmount < 1 || enteredAmount > 5) {
+      return;
+    }
     props.addItem(amountInputRef.current.value);
   };
   return (
-    <div className={`${classes["menu-item__form"]} mar-10`}>
+    <form
+      className={`${classes["menu-item__form"]} mar-10`}
+      onSubmit={submitHandler}
+    >
       <input
         type="number"
-        min={1}
-        max={5}
-        defaultValue={1}
+        min="1"
+        max="5"
+        step="1"
+        defaultValue="1"
         className="fw600"
         ref={amountInputRef}
       />
-      <Button className={classes.button} onClick={confirmFormCart}>
+      <Button className={classes.button} type="submit">
         Add to Cart
       </Button>
-    </div>
+    </form>
   );
 };
 

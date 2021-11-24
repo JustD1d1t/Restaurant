@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { combineReducers, createStore } from "redux";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AOS from "aos";
 
 import cartReducer from "./store/reducers/cart";
@@ -17,8 +17,9 @@ import App from "./App";
 AOS.init({
   delay: 100,
   duration: 700,
-  offset: 200,
+  offset: 100,
   easing: "ease-in-out",
+  once: true,
 });
 
 const rootReducer = combineReducers({
@@ -29,9 +30,9 @@ const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById("root")
 );

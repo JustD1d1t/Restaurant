@@ -152,7 +152,7 @@ const MenuItems = () => {
     />
   ));
   return (
-    <section>
+    <div>
       <h2 className="text-center mar-20 h2">Menu</h2>
       <div>
         <h3 className="text-center mar-10 h3">Breakfast</h3>
@@ -166,7 +166,7 @@ const MenuItems = () => {
         <h3 className="text-center mar-10 h3">Ice Cold Drinks</h3>
         {iceColdDrinks}
       </div>
-    </section>
+    </div>
   );
 };
 

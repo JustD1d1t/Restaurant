@@ -4,7 +4,6 @@ import {
   CLOSE_CART,
   INCREASE_AMOUNT,
   DECREASE_AMOUNT,
-  CONFIRM_ORDER,
   CLEAR_ORDER,
 } from "../actions/cart";
 
@@ -57,10 +56,6 @@ const cartReducer = (state = initialState, action) => {
       if (newState.products[indexInCart].amount === 0) {
         newState.products.splice(indexInCart, 1);
       }
-      return newState;
-    case CONFIRM_ORDER:
-      newState = { ...state };
-      newState.isCartConfirmed = !state.isCartConfirmed;
       return newState;
     case CLEAR_ORDER:
       newState = { ...state };

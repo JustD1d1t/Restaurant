@@ -7,13 +7,15 @@ const CommentItem = (props) => {
       className={classes["comment-item"]}
       data-aos="fade-left"
     >
-      <div>
+      <div className={classes["comment-item__details"]}>
         <img src={props.img} alt="" />
+        <div>
+          <h3>{props.title}</h3>
+          <p>{props.date}</p>
+          <p className="mar-10 altClr">{props.name}</p>
+        </div>
       </div>
       <div>
-        <h3>{props.title}</h3>
-        <p>{props.date}</p>
-        <p className="mar-10 altClr">{props.name}</p>
         <p className="fw300">{props.comment}</p>
       </div>
     </div>
