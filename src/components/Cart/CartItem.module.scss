@@ -7,6 +7,9 @@
   @media screen and (min-width: 767px) {
     flex-direction: row;
   }
+  @media screen and (orientation: landscape) {
+    flex-direction: row;
+  }
   &__meal-name {
     h3 {
       text-align: left;

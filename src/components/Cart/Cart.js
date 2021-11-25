@@ -15,7 +15,6 @@ const Cart = () => {
     totalPrice += product.price * product.amount;
   });
 
-  console.log(totalPrice);
   const [isCartConfirmed, setIsCartConfirmed] = useState(false);
   const dispatch = useDispatch();
 
@@ -40,7 +39,11 @@ const Cart = () => {
     setIsCartConfirmed(false);
   };
   return (
-    <Modal show={isCartVisible} closed={handleCloseCart}>
+    <Modal
+      show={isCartVisible}
+      closed={handleCloseCart}
+      className={classes["modal"]}
+    >
       <div className={classes["cart"]}>
         <p className="h3 pad-10">Cart</p>
         <CartItems />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CSSTransition from "react-transition-group/CSSTransition";
 
 import "./Modal.scss";
@@ -9,7 +9,14 @@ const animationTiming = {
 };
 
 const Modal = (props) => {
-  const classes = `modal__background ${props.className}`;
+  const classes = `modal__content ${props.className}`;
+  useEffect(() => {
+    if (props.show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [props.show]);
   return (
     <CSSTransition
       mountOnEnter
@@ -25,8 +32,8 @@ const Modal = (props) => {
         appearActive: null,
       }}
     >
-      <div className={classes}>
-        <div className="modal__content">
+      <div className="modal__background">
+        <div className={classes}>
           {props.children}
           <button onClick={props.closed} className="modal-close-button">
             &#x2715;

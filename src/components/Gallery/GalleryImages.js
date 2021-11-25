@@ -16,11 +16,16 @@ const GalleryImages = () => {
       /\.(png|jpe?g|svg)$/
     )
   );
+  const changePreview = (test) => {
+    console.log(test);
+  };
   const images = listOfImages.map((image, index) => (
     <GalleryImage
       key={image.default}
       image={image.default}
       image2={listOfModalImages[index].default}
+      index={index}
+      changePreview={changePreview}
     />
   ));
   return (
