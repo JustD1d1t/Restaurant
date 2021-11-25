@@ -15,7 +15,11 @@ const GalleryImage = (props) => {
   };
   return (
     <div>
-      <Modal show={modalIsOpen} closed={closeModal}>
+      <Modal
+        show={modalIsOpen}
+        closed={closeModal}
+        className={classes["modal"]}
+      >
         <div className={classes["modal-image__container"]}>
           <img src={props.image2} alt="" />
         </div>

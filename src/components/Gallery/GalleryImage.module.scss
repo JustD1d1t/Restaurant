@@ -22,3 +22,12 @@
     max-height: 100%;
   }
 }
+.modal {
+  height: auto;
+  @media screen and(orientation: landscape) {
+    height: 90vh;
+  }
+  @media screen and(orientation: landscape) and(min-width: 767px) {
+    height: auto;
+  }
+}
